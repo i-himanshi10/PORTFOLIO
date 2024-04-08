@@ -1,0 +1,149 @@
+* {
+    box-sizing: border-box;
+}
+
+header {
+    background-image: url('logos/cerbg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 150px;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 5px 10px;
+    font-size: 15px;
+    padding: 3px;
+}
+
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+    background-color: #333;
+    overflow: hidden;
+}
+
+nav a {
+    text-decoration: none;
+    padding: 20px;
+    text-align: center;
+    float: left;
+    color: white;    
+}
+
+nav a:hover {
+    color: aqua;
+    background-color: grey;
+}
+
+h1{
+    text-align: center;
+}
+h1 span{
+    margin-bottom: 100px;
+    padding: 10px;
+    background: linear-gradient(135deg, rgb(153, 23, 153) 60%, cyan);
+    color: white;
+    border-radius: 20px;
+}
+
+.ev,
+.pcb,
+.matlab,
+.python,
+.RER,
+.smart-car,
+.evpan {
+    margin-top: 20px;
+}
+
+.ev h3,
+.pcb h3,
+.matlab h3,
+.python h3,
+.RER h3,
+.smart-car h3,
+.evpan h3 {
+    color: #333;
+    margin-bottom: 10px; /* Added spacing between consecutive h3 lines */
+}
+
+.ev img,
+.pcb img,
+.matlab img,
+.python img,
+.RER img,
+.smart-car img,
+.evpan img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px; /* Added spacing below the last image in each section */
+}
+
+/* Added spacing between certificate headings */
+.ev h3 + img,
+.pcb h3 + img,
+.matlab h3 + img,
+.python h3 + img,
+.RER h3 + img,
+.smart-car h3 + img,
+.evpan h3 + img {
+    margin-top: 20px;
+}
+
+hr {
+    margin-bottom: 50px;
+}
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    position: relative;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 2fr 0.3fr 0.3fr 0.3fr;
+    grid-gap: 1px;
+    grid-auto-rows: minmax(100px, auto);
+    grid-auto-columns: minmax(50px, 50px);
+}
+ 
+.items#copyright{
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    margin: 2px;
+}
+
+.items#contact-us,
+.items#link,
+.items#mail {
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    margin: 2px;
+}
+
+.items#link img{
+    height: 80px;
+    width: auto;
+    margin: 0 10px;
+}
+
+.items#mail img {
+    height: 50px;
+    width: auto;
+    margin: 0 10px -10px 0;
+}

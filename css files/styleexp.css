@@ -1,0 +1,112 @@
+* {
+    box-sizing: border-box;
+}
+
+header {
+    background-image: url('logos/expbg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 150px;
+}
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 5px 10px;
+    padding: 3px;
+}
+main {
+    background-color: white;
+    text-align: center;
+    font-size: 15px;
+    margin-bottom: 150px;
+}
+
+nav {
+    background-color: #333;
+    overflow: hidden;
+    position: sticky;
+    top: 0;
+}
+
+nav a {
+    text-decoration: none;
+    padding: 20px;
+    text-align: center;
+    float: left;
+    color: white;
+}
+
+nav a:hover {
+    color: aqua;
+    background-color: grey;
+}
+
+main {
+    padding: 10px;
+    background-color: white;
+    text-align: left;
+}
+
+.exp {
+    text-align: center;
+    position: relative;
+}
+
+h2 {
+    color: rgb(75, 22, 128);
+    padding: 10px;
+    font-size: 30px;
+}
+
+li{
+    font-size: 20px;
+}
+hr {
+    margin-bottom: 30px;
+}
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    position: relative;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 2fr 0.3fr 0.3fr 0.3fr;
+    grid-gap: 1px;
+    grid-auto-rows: minmax(100px, auto);
+    grid-auto-columns: minmax(50px, 50px);
+}
+
+.items#copyright{
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    margin: 2px;
+}
+
+.items#contact-us,
+.items#link,
+.items#mail {
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    margin: 2px;
+}
+
+.items#link img{
+    height: 80px;
+    width: auto;
+    margin: 0 10px;
+}
+
+.items#mail img {
+    height: 50px;
+    width: auto;
+    margin: 0 10px -10px 0;
+}

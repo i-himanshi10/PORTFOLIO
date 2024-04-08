@@ -1,0 +1,35 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.column {
+  float: left;
+  width: 30%;
+  margin: 10px;
+  box-sizing: border-box;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+/* Media Query for smaller screens */
+@media screen and (max-width: 768px) {
+  .column {
+    width: 100%;
+  }
+}
+
+/* Media Query for larger screens */
+@media screen and (min-width: 1201px) {
+  .column {
+    width: 25%;
+  }
+}
