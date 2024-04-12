@@ -9,7 +9,7 @@ body {
     padding: 3px;
 }
 
-header{
+.bglogo{
     background-image: url('logos/bg.png');
     background-repeat: no-repeat;
     background-size: cover;
