@@ -158,20 +158,48 @@ hr {
     margin: 0 10px -10px 0;
 }
 
-/* Responsive Styles
+/* Media queries for responsiveness */
 @media only screen and (max-width: 768px) {
-    /* Adjustments for smaller screens
+    /* Adjustments for smaller screens */
+
+    /* Header adjustments */
     header {
-       text-align: center;
+        height: 100px; /* Decrease header height for smaller screens */
     }
+
+    /* Navigation adjustments */
     nav {
-       text-align: center;
+        /* Example: Change navigation layout for smaller screens */
+        flex-direction: column; /* Display navigation links in a column */
     }
-    main section {
-       padding: 20px;
+
+    /* Article adjustments */
+    article {
+        /* Example: Adjust article layout for smaller screens */
+        padding: 20px; /* Add padding to articles for better readability */
     }
-    .carousel {
-       display: block;
-       margin: auto;
+
+    /* Footer adjustments */
+    footer {
+        /* Example: Adjust footer layout for smaller screens */
+        font-size: 14px; /* Decrease font size in the footer */
     }
- } */
+}
+
+/* Additional media queries for other screen sizes */
+@media only screen and (max-width: 480px) {
+    /* Adjustments for even smaller screens */
+
+    /* Example: Further adjustments for smaller screens */
+    nav {
+        font-size: 14px; /* Decrease font size of navigation links */
+    }
+
+    article {
+        padding: 15px; /* Further reduce padding for smaller screens */
+    }
+
+    footer {
+        font-size: 12px; /* Decrease font size even more in the footer */
+    }
+}
