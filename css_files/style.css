@@ -154,7 +154,6 @@ hr {
 @media (min-width: 1200px) {
     header .bglogo {
         height: 200px;
-        background-position: center -80px;
     }
 
     nav a {
@@ -173,7 +172,7 @@ hr {
 /* Tablets */
 @media (min-width: 768px) and (max-width: 1199px) {
     header .bglogo {
-        height: 150px;
+        height: 100px;
         background-position: center -50px;
     }
 

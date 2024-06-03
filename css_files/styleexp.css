@@ -79,13 +79,14 @@ hr {
     grid-auto-columns: minmax(50px, 50px);
 }
 
-.items#copyright{
+.items#copyright {
     border-radius: 3px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: left;
     padding: 10px;
     margin: 2px;
+    padding-left: 70px;
 }
 
 .items#contact-us,

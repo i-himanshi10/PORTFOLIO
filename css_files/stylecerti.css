@@ -28,6 +28,8 @@ main {
 nav {
     background-color: #333;
     overflow: hidden;
+    position: sticky; /* This makes the navigation bar sticky */
+    top: 0; /* You may want to add this to ensure it sticks to the top */
 }
 
 nav a {
@@ -116,13 +118,14 @@ hr {
     grid-auto-columns: minmax(50px, 50px);
 }
  
-.items#copyright{
+.items#copyright {
     border-radius: 3px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: left;
     padding: 10px;
     margin: 2px;
+    padding-left: 70px;
 }
 
 .items#contact-us,
