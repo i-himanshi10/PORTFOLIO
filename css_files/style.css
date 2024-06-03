@@ -1,3 +1,4 @@
+/* Global adjustments */
 * {
     box-sizing: border-box;
 }
@@ -8,14 +9,6 @@ body {
     font-size: 15px;
     padding: 3px;
 }
-
-.bglogo{
-    background-image: url('logos/bg.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center -50px;
-    height: 150px;
-}  
 
 nav {
     background-color: #333;
@@ -30,8 +23,7 @@ nav a {
     padding: 20px;
     text-align: center;
     float: left;
-    color: white;    
-    
+    color: white;
 }
 
 nav a:hover {
@@ -49,7 +41,7 @@ h2 {
     text-align: center;
 }
 
-h2 span{
+h2 span {
     padding: 10px 55px;
     text-align: center;
     margin-top: 20px;
@@ -58,7 +50,7 @@ h2 span{
     color: white;
 }
 
-#box{
+#box {
     border-radius: 50%;
     float: right;
     position: relative;
@@ -69,7 +61,8 @@ h2 span{
     padding: 1em;
     margin-right: 20px;
     margin-top: 20px;
-    }
+}
+
 p {
     font-size: 30px;
     font-family: 'Times New Roman', Times, serif;
@@ -83,9 +76,9 @@ p {
 .carousel-cell {
     margin-bottom: 30px;
     padding: 20px;
-}  
+}
 
-h1{
+h1 {
     margin-top: 20px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 30px;
@@ -98,9 +91,8 @@ button {
     text-align: center;
     border-radius: 20px;
     color: white;
-    background-color:rgb(202, 83, 36) ;
+    background-color: rgb(202, 83, 36);
 }
-
 
 button:hover {
     background-color: aqua;
@@ -125,7 +117,7 @@ hr {
     grid-auto-columns: minmax(50px, 50px);
 }
 
-.items#copyright{
+.items#copyright {
     border-radius: 3px;
     display: flex;
     align-items: center;
@@ -146,7 +138,7 @@ hr {
     margin: 2px;
 }
 
-.items#link img{
+.items#link img {
     height: 80px;
     width: auto;
     margin: 0 10px;
@@ -158,48 +150,93 @@ hr {
     margin: 0 10px -10px 0;
 }
 
-/* Media queries for responsiveness */
-@media only screen and (max-width: 768px) {
-    /* Adjustments for smaller screens */
-
-    /* Header adjustments */
-    header {
-        height: 100px; /* Decrease header height for smaller screens */
+/* Responsive adjustments */
+@media (min-width: 1200px) {
+    header .bglogo {
+        height: 200px;
+        background-position: center -80px;
     }
 
-    /* Navigation adjustments */
-    nav {
-        /* Example: Change navigation layout for smaller screens */
-        flex-direction: column; /* Display navigation links in a column */
+    nav a {
+        padding: 20px 30px;
     }
 
-    /* Article adjustments */
-    article {
-        /* Example: Adjust article layout for smaller screens */
-        padding: 20px; /* Add padding to articles for better readability */
+    main {
+        padding: 30px;
     }
 
-    /* Footer adjustments */
-    footer {
-        /* Example: Adjust footer layout for smaller screens */
-        font-size: 14px; /* Decrease font size in the footer */
+    h1 {
+        font-size: 2em;
     }
 }
 
-/* Additional media queries for other screen sizes */
-@media only screen and (max-width: 480px) {
-    /* Adjustments for even smaller screens */
-
-    /* Example: Further adjustments for smaller screens */
-    nav {
-        font-size: 14px; /* Decrease font size of navigation links */
+/* Tablets */
+@media (min-width: 768px) and (max-width: 1199px) {
+    header .bglogo {
+        height: 150px;
+        background-position: center -50px;
     }
 
-    article {
-        padding: 15px; /* Further reduce padding for smaller screens */
+    nav a {
+        flex: 1 0 50%;
+        text-align: center;
+        padding: 14px;
     }
 
-    footer {
-        font-size: 12px; /* Decrease font size even more in the footer */
+    main {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    .carousel img {
+        width: 100%;
+        height: auto;
+    }
+
+    .carousel-cell {
+        width: 60%;
+        margin: auto;
+    }
+}
+
+/* Mobile Phones */
+@media (max-width: 767px) {
+    header .bglogo {
+        height: 100px;
+        background-repeat: no-repeat;
+         background-size: contain;
+         background-position: center 30px;
+         height: 150px;
+    }
+
+    nav a {
+        flex: 1 0 100%;
+        text-align: center;
+        padding: 10px;
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    .carousel img {
+        width: 100%;
+        height: auto;
+    }
+
+    .carousel-cell {
+        width: 80%;
+        margin: auto;
+    }
+
+    .footer .container {
+        flex-direction: column;
     }
 }
