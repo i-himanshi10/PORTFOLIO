@@ -56,19 +56,13 @@ article {
     color: #2c3e50;
 }
 
-.carousel1 {
+.carousel {
     margin-bottom: 20px;
 }
 
-.carousel-cell1,.carousel-cell2,.carousel-cell3,.carousel-cell4 {
-    .carousel-cell{
-        max-width: 50%; /* or any desired width */
-        height: 300px; /* or any desired height */    
-} 
-
-.carousel-cell img {
-    max-width: 100%;
-    height: auto;
+.carousel-cell {
+    margin-bottom: 30px;
+    padding: 20px;
 }
 
 h2 {
