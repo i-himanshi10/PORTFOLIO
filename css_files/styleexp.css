@@ -112,47 +112,93 @@ hr {
 }
 
 /* Media queries for responsiveness */
-@media only screen and (max-width: 768px) {
-    /* Adjustments for smaller screens */
 
-    /* Header adjustments */
-    header {
-        height: 100px; /* Decrease header height for smaller screens */
+@media (min-width: 1200px) {
+    header .bglogo {
+        height: 200px;
+        background-position: center -80px;
     }
 
-    /* Navigation adjustments */
-    nav {
-        /* Example: Change navigation layout for smaller screens */
-        flex-direction: column; /* Display navigation links in a column */
+    nav a {
+        padding: 20px 30px;
     }
 
-    /* Article adjustments */
-    article {
-        /* Example: Adjust article layout for smaller screens */
-        padding: 20px; /* Add padding to articles for better readability */
+    main {
+        padding: 30px;
     }
 
-    /* Footer adjustments */
-    footer {
-        /* Example: Adjust footer layout for smaller screens */
-        font-size: 14px; /* Decrease font size in the footer */
+    h1 {
+        font-size: 2em;
     }
 }
 
-/* Additional media queries for other screen sizes */
-@media only screen and (max-width: 480px) {
-    /* Adjustments for even smaller screens */
-
-    /* Example: Further adjustments for smaller screens */
-    nav {
-        font-size: 14px; /* Decrease font size of navigation links */
+/* Tablets */
+@media (min-width: 768px) and (max-width: 1199px) {
+    header .bglogo {
+        height: 150px;
+        background-position: center -50px;
     }
 
-    article {
-        padding: 15px; /* Further reduce padding for smaller screens */
+    nav a {
+        flex: 1 0 50%;
+        text-align: center;
+        padding: 14px;
     }
 
-    footer {
-        font-size: 12px; /* Decrease font size even more in the footer */
+    main {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    .carousel img {
+        width: 100%;
+        height: auto;
+    }
+
+    .carousel-cell {
+        width: 60%;
+        margin: auto;
+    }
+}
+
+/* Mobile Phones */
+@media (max-width: 767px) {
+    header .bglogo {
+        height: 100px;
+        background-repeat: no-repeat;
+         background-size: contain;
+         background-position: center 30px;
+         height: 150px;
+    }
+
+    nav a {
+        flex: 1 0 100%;
+        text-align: center;
+        padding: 10px;
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    .carousel img {
+        width: 100%;
+        height: auto;
+    }
+
+    .carousel-cell {
+        width: 80%;
+        margin: auto;
+    }
+
+    .footer .container {
+        flex-direction: column;
     }
 }
