@@ -8,7 +8,7 @@
 	//Setting connection attributes
 	$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 	//Query for creating reating the member table in the database if not exist yet.
-	$query = "CREATE TABLE IF NOT EXISTS visitordata(vis_ INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, visname TEXT, visgender TEXT, vismail TEXT, visedu TEXT, visfeedback TEXT,  vischanges TEXT)";
+	$query = "CREATE TABLE IF NOT EXISTS DATA(id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, name TEXT, gender TEXT, mail TEXT, education TEXT, feedback TEXT,  changes TEXT)";
 	//Executing the query
 	$conn->exec($query);
 ?>

@@ -36,8 +36,7 @@ session_start();
     </nav>
     <div class="container">
         <h2><span><b>DETAILS</b></span></h2>
-        <form method="POST" action="save.php">    
-            <div class="alert alert-info">Login</div>
+        <form method="POST" action="save.php">
             
             <div class="v_name">
                 <label>FULL NAME:</label>
