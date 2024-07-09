@@ -1,6 +1,13 @@
-let hellobtn = document.querySelector('button');
-hellobtn.addEventListener('click',showMsg);
+document.addEventListener('DOMContentLoaded', function() {
+    const navLogo = document.querySelector('.nav-logo');
+    const navLinks = document.querySelector('.nav-links');
 
-function showMsg(){
-    alert("Redirecting towards my resume !!");
-}
+    if (navLogo && navLinks) {
+        navLogo.addEventListener('click', function(e) {
+            if (window.innerWidth <= 768) {  // Only toggle on mobile screens
+                e.preventDefault();  // Prevent the logo link from being followed
+                navLinks.classList.toggle('active');
+            }
+        });
+    }
+});
