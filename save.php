@@ -5,7 +5,7 @@ session_start();
 // Including the database connection
 require_once 'conn.php';
 
-if (isset($_POST['register'])) {
+if (isset($_POST['submit'])) {
     // Setting variables
     $name = $_POST['name'];
     $gender = $_POST['gender'];
@@ -32,7 +32,7 @@ if (isset($_POST['register'])) {
     if (empty($errors)) {
         try {
             // Insertion Query
-            $query = "INSERT INTO `DATA` (name, gender, mail, education, feedback, changes) VALUES(:name, :gender, :mail, :education, :feedback, :changes)";
+            $query = "INSERT INTO DATA (name, gender, mail, education, feedback, changes) VALUES(:name, :gender, :mail, :education, :feedback, :changes)";
             $stmt = $conn->prepare($query);
             $stmt->bindParam(':name', $name);
             $stmt->bindParam(':gender', $gender);
@@ -43,26 +43,18 @@ if (isset($_POST['register'])) {
 
             // Execute the query
             if ($stmt->execute()) {
-                // Setting a 'success' session to save our insertion success message.
-                $_SESSION['success'] = "Successfully created an account";
-
-                // Redirecting to the form.php
-                header('Location: form.php');
-                exit();
+                $_SESSION['success'] = "Feedback submitted successfully.";
             } else {
-                // If execution failed, set an error message
                 $_SESSION['error'] = "There was an error processing your request.";
             }
         } catch (PDOException $e) {
-            // Catch any PDO exceptions and set an error message
             $_SESSION['error'] = "Database error: " . $e->getMessage();
         }
     } else {
-        // If there were validation errors, set them in the session
         $_SESSION['error'] = implode("<br>", $errors);
     }
 
-    // Redirect back to the form in case of errors
+    // Redirect back to the form
     header('Location: form.php');
     exit();
 }

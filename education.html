@@ -8,58 +8,57 @@
    <link rel="icon" type="image/png" sizes="32x32" href="logos/favicon/favicon-32x32.png">
    <link rel="icon" type="image/png" sizes="16x16" href="logos/favicon/favicon-16x16.png">
    <link rel="manifest" href="/site.webmanifest">
-   <link rel="manifest" href="/site.webmanifest">
    <link rel="stylesheet" href="css_files/styleedu.css">
-   <style>
-      header {
-         background-image: url('logos/edbg.png');
-         background-repeat: no-repeat;
-         background-size: cover;
-         background-position: center -40px;
-         height: 150px;
-      }
-   </style>
 </head>
 <body>
    <header>
+      <img src="logos/edbg.png" alt="Education Background" class="header-image">
    </header>
    <nav>
-      <a href="index.html">HOME</a>
-      <a href="education.html">EDUCATION</a>
-      <a href="experience.html">EXPERIENCE</a>
-      <a href="project.html">PROJECTS</a>
-      <a href="skills.html">SKILLS</a>
-      <a href="Certificate.html">CERTIFICATES</a>
-      <a href="form.php" target="_blank">FEEDBACK</a>
+      <div class="nav-container">
+         <div class="nav-links">
+            <a href="index.html">HOME</a>
+            <a href="education.html">EDUCATION</a>
+            <a href="experience.html">EXPERIENCE</a>
+            <a href="project.html">PROJECTS</a>
+            <a href="skills.html">SKILLS</a>
+            <a href="Certificate.html">CERTIFICATES</a>
+            <a href="form.php">FEEDBACK</a>
+         </div>
+      </div>
    </nav>
 
    <main>
       <div class="table-container">
          <table class="education-table">
-            <tr>
-               <th>Institution</th>
-               <th>Stream</th>
-               <th>Duration</th>
-               <th>Percentage/CGPA</th>
-            </tr>
-            <tr>
-               <td>BSA College of Engineering and Technology, Mathura</td>
-               <td>ELECTRICAL ENGINEERING</td>
-               <td>August 2019 - May 2023</td>
-               <td>82.6%</td>
-            </tr>
-            <tr>
-               <td>HPDS, Vrindavan(CBSE)</td>
-               <td>INTERMEDIATE</td>
-               <td>April 2018 - April 2019</td>
-               <td>85.6%</td>
-            </tr>
-            <tr>
-               <td>HPDS, Vrindavan(CBSE)</td>
-               <td>HIGH SCHOOL</td>
-               <td>April 2016 - April 2017</td>
-               <td>8(cgpa)</td>
-            </tr>
+            <thead>
+               <tr>
+                  <th>Institution</th>
+                  <th>Stream</th>
+                  <th>Duration</th>
+                  <th>Percentage/CGPA</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td data-label="Institution">BSA College of Engineering and Technology, Mathura</td>
+                  <td data-label="Stream">ELECTRICAL ENGINEERING</td>
+                  <td data-label="Duration">August 2019 - May 2023</td>
+                  <td data-label="Percentage/CGPA">82.6%</td>
+               </tr>
+               <tr>
+                  <td data-label="Institution">HPDS, Vrindavan(CBSE)</td>
+                  <td data-label="Stream">INTERMEDIATE</td>
+                  <td data-label="Duration">April 2018 - April 2019</td>
+                  <td data-label="Percentage/CGPA">85.6%</td>
+               </tr>
+               <tr>
+                  <td data-label="Institution">HPDS, Vrindavan(CBSE)</td>
+                  <td data-label="Stream">HIGH SCHOOL</td>
+                  <td data-label="Duration">April 2016 - April 2017</td>
+                  <td data-label="Percentage/CGPA">8(cgpa)</td>
+               </tr>
+            </tbody>
          </table>
       </div>
    </main>
@@ -70,10 +69,10 @@
             <div class="items" id="copyright">Copyright &#169; 2024 My Portfolio<br> Made with &hearts; by Himanshi Sharma</div>
             <div class="items" id="contact-us">Contact Us</div>
             <div class="items" id="link">
-               <a target="_blank" href="https://www.linkedin.com/in/himanshi-sharma-70043824b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><img src="logos/link.png" alt="Link Image"></a>
+               <a target="_blank" href="https://www.linkedin.com/in/himanshi-sharma-70043824b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><img src="logos/link.png" alt="Link Image"></a>
             </div>          
             <div class="items" id="mail">
-               <a target="_blank" href="#" alt="mail"><img src="logos/email.png" alt="Mail Image"></a>
+               <a target="_blank" href="#"><img src="logos/email.png" alt="Mail Image"></a>
             </div>
          </div>
       </div>     

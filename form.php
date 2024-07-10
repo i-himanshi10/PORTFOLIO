@@ -36,13 +36,7 @@ session_start();
     </nav>
     <div class="container">
         <h2><span><b>DETAILS</b></span></h2>
-<<<<<<< HEAD
-        <form method="POST" action="login_query.php">    
-            <div class="alert alert-info">Login</div>
-=======
         <form method="POST" action="save.php">
->>>>>>> origin/main
-            
             <div class="v_name">
                 <label>FULL NAME:</label>
                 <input type="text" name="name" class="form-control" placeholder="xyz abc" required />
@@ -75,32 +69,30 @@ session_start();
             </div>
             <div class="v_feedback">
                 <label>FEEDBACK:</label>
-<<<<<<< HEAD
-                <textarea id="status" name="status" placeholder="your views" required></textarea>
-            </div>
-            <div class="v_changes">
-                <label>SUGGESTED CHANGES:</label>
-                <textarea id="change" name="change" placeholder="changes suggested" required></textarea>
-=======
                 <textarea id="status" name="feedback" placeholder="your views" required></textarea>
             </div>
             <div class="v_changes">
                 <label>SUGGESTED CHANGES:</label>
                 <textarea id="change" name="changes" placeholder="changes suggested" required></textarea>
->>>>>>> origin/main
             </div>
             
             <?php
-                // checking if the session 'error' is set. Error session is the message if the 'Username' and 'Password' are not valid.
                 if (isset($_SESSION['error'])) {
             ?>
-            <!-- Display Login Error message -->
             <div class="alert alert-danger">
                 <?php 
                     echo $_SESSION['error'];
-                    // Unsetting the 'error' session after displaying the message.
                     unset($_SESSION['error']);
-                    session_destroy();
+                ?>
+            </div>
+            <?php
+                }
+                if (isset($_SESSION['success'])) {
+            ?>
+            <div class="alert alert-success">
+                <?php 
+                    echo $_SESSION['success'];
+                    unset($_SESSION['success']);
                 ?>
             </div>
             <?php

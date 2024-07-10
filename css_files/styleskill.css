@@ -1,19 +1,26 @@
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 5px 10px;
-    padding: 3px;
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
 }
 
-header{
-    background-image: url('logos/skillbg.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+header {
+    position: relative;
     height: 150px;
+    overflow: hidden;
+}
+
+.header-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
 }
 
 h2 {
@@ -40,128 +47,109 @@ table {
     padding: 8px;
  }
 
- th {
+th {
     background-color: #f2f2f2;
  }
 
+/* Navigation styles */
 nav {
     background-color: #333;
-    overflow: hidden;
     position: sticky;
     top: 0;
+    z-index: 1000;
 }
 
-nav a {
+.nav-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.nav-logo {
+    color: white;
     text-decoration: none;
-    padding: 20px;
-    text-align: center;
-    float: left;
-    color: white;    
+    font-weight: bold;
+    font-size: 1.2em;
 }
 
-nav a:hover {
-    color: aqua;
-    background-color: grey;
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
 }
 
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: background-color 0.3s;
+}
+
+.nav-links a:hover {
+    background-color: #555;
+}
+
+/* Main content */
 main {
-    padding: 10px 0 100px 0;
-    background-color: white;
-    text-align: left;   
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
 hr {
     margin-bottom: 30px;
 }
 
-.footer {
+/* Footer styles */
+footer {
     background-color: #333;
     color: #fff;
-    position: relative;
+    padding: 20px 0;
 }
 
-.container {
-    display: grid;
-    grid-template-columns: 2fr 0.3fr 0.3fr 0.3fr;
-    grid-gap: 1px;
-    grid-auto-rows: minmax(100px, auto);
-    grid-auto-columns: minmax(50px, 50px);
-}
-
-.items#copyright {
-    border-radius: 3px;
+.footer-container {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
     align-items: center;
-    justify-content: left;
-    padding: 10px;
-    margin: 2px;
-    padding-left: 70px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
-.items#contact-us,
-.items#link,
-.items#mail {
-    border-radius: 3px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px;
-    margin: 2px;
+.copyright, .contact, .social-links {
+    margin: 10px 0;
 }
 
-.items#link img{
-    height: 80px;
+.social-links a {
+    display: inline-block;
+    margin-left: 15px;
+}
+
+.social-links img {
+    height: 30px;
     width: auto;
-    margin: 0 10px;
 }
 
-.items#mail img {
-    height: 50px;
-    width: auto;
-    margin: 0 10px -10px 0;
-}
-
-/* Media queries for responsiveness */
 
 /* Responsive adjustments */
-@media (min-width: 1200px) {
-    header .bglogo {
-        height: 200px;
-        background-position: center -80px;
-    }
-
-    nav a {
-        padding: 20px 30px;
-    }
-
-    main {
-        padding: 30px;
-    }
-
-    h1 {
-        font-size: 2em;
-    }
-}
 
 /* Tablets */
-@media (min-width: 768px) and (max-width: 1199px) {
-    header .bglogo {
-        height: 150px;
-        background-position: center -50px;
+@media (min-width: 769px) and (max-width: 1024x) {
+    .nav-container {
+        flex-direction: column;
+        align-items: center;
     }
 
-    nav a {
-        flex: 1 0 50%;
-        text-align: center;
-        padding: 14px;
+    .nav-logo {
+        margin-bottom: 10px;
     }
 
-    main {
-        padding: 20px;
-    }
-
-    h1 {
-        font-size: 1.8em;
+    .nav-links {
+        justify-content: center;
     }
 
     .carousel img {
@@ -176,27 +164,36 @@ hr {
 }
 
 /* Mobile Phones */
-@media (max-width: 767px) {
-    header .bglogo {
+@media (max-width: 768px) {
+    header {
         height: 100px;
-        background-repeat: no-repeat;
-         background-size: contain;
-         background-position: center 30px;
-         height: 150px;
     }
 
-    nav a {
-        flex: 1 0 100%;
+    .nav-container {
+        flex-direction: column;
+    }
+
+    .nav-logo {
+        margin-bottom: 10px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-links a {
         text-align: center;
         padding: 10px;
+        border-top: 1px solid #555;
     }
 
-    main {
-        padding: 10px;
+    h2 {
+        font-size: 20px;
     }
 
-    h1 {
-        font-size: 1.5em;
+    h3 {
+        font-size: 16px;
     }
 
     .carousel img {
@@ -209,7 +206,16 @@ hr {
         margin: auto;
     }
 
-    .footer .container {
+    .footer-container {
         flex-direction: column;
+        text-align: center;
+    }
+
+    .social-links {
+        margin-top: 15px;
+    }
+
+    .social-links a {
+        margin: 0 10px;
     }
 }

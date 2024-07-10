@@ -10,29 +10,28 @@
    <link rel="manifest" href="/site.webmanifest">
    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
    <link rel="stylesheet" href="css_files/stylepro.css">
-   <style>
-    header {
-       background-image: url('logos/probg.png');
-       background-repeat: no-repeat;
-       background-size: cover;
-       background-position: center -50px;
-       height: 150px;
-    }
- </style>
 </head>
 <body>
    <header>
+    <header>
+        <img src="logos/probg.png" alt="Experience Background" class="header-image">
+     </header>
    </header>
 
    <nav>
-      <a href="index.html">HOME</a>
-      <a href="education.html">EDUCATION</a>
-      <a href="experience.html">EXPERIENCE</a>
-      <a href="project.html">PROJECTS</a>
-      <a href="skills.html">SKILLS</a>
-      <a href="Certificate.html">CERTIFICATES</a>
-      <a href="form.php" target="_blank">FEEDBACK</a>
-   </nav>
+    <div class="nav-container">
+       <a href="index.html" class="nav-logo">My Portfolio</a>
+       <div class="nav-links">
+          <a href="index.html">HOME</a>
+          <a href="education.html">EDUCATION</a>
+          <a href="experience.html">EXPERIENCE</a>
+          <a href="project.html">PROJECTS</a>
+          <a href="skills.html">SKILLS</a>
+          <a href="Certificate.html">CERTIFICATES</a>
+          <a href="form.php" target="_blank">FEEDBACK</a>
+       </div>
+    </div>
+ </nav>
  
    <main>
     <article>
@@ -162,19 +161,20 @@
    </main>
    <hr>
    <footer>
-      <div class="footer">
-         <div class="container">
-            <div class="items" id="copyright">Copyright &#169; 2024 My Portfolio<br> Made with &hearts; by Himanshi Sharma</div>
-            <div class="items" id="contact-us">Contact Us</div>
-            <div class="items" id="link">
-                <a href="https://www.linkedin.com/in/himanshi-sharma-70043824b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><img src="logos/link.png" alt="Link Image"></a>
-             </div>          
-             <div class="items" id="mail">
-                <a href="#" alt="mail" target="_blank" ><img src="logos/email.png" alt="Mail Image"></a>
-            </div>
-         </div>
-      </div>     
-   </footer>
+    <div class="footer-container">
+       <div class="copyright">Copyright © 2024 My Portfolio<br> Made with ♥ by Himanshi Sharma</div>
+       <div class="contact">Contact Us</div>
+       <div class="social-links">
+          <a href="https://www.linkedin.com/in/himanshi-sharma-70043824b" target="_blank">
+             <img src="logos/link.png" alt="LinkedIn">
+          </a>
+          <a href="#" target="_blank">
+             <img src="logos/email.png" alt="Email">
+          </a>
+       </div>
+    </div>
+ </footer>
    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+   <script src="script.js"></script>
 </body>
 </html>
