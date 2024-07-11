@@ -193,16 +193,41 @@ footer {
     }
 
     .nav-container {
-        flex-direction: column;
+        justify-content: space-between;
         align-items: center;
+        flex-direction: row;
     }
 
-    .nav-logo {
-        margin-bottom: 10px;
+    .hamburger-menu {
+        display: block;
     }
 
     .nav-links {
-        justify-content: center;
+        display: none;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links.active {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .nav-links a {
+        padding: 15px;
+        border-top: 1px solid #555;
+    }
+
+    .hamburger-menu.active span:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .hamburger-menu.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger-menu.active span:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
     }
 
     .carousel img {
